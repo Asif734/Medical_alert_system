@@ -1,0 +1,12 @@
+FastAPI
+uvicorn
+pydantic
+sqlalchemy
+asyncpg
+python-dotenv
+requests
+pytest
+pydub
+SpeechRecognition
+twilio
+openai
