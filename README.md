@@ -74,7 +74,3 @@ Next recommended tasks (priority)
 Notes / safety
 - The LLM-based profiler is a clinical triage assistant prototype. Do not deploy as a sole triage mechanism — add human-in-the-loop and audit logs.
 - Keep PHI out of public repos and follow applicable regulations.
-
-If you want, I can:
-- Add a minimal alerting implementation (SMTP + webhook) and a sample API endpoint that wires transcription → profiling → alert.
-- Add a small synthetic dataset and a test script to simulate end-to-end processing.
