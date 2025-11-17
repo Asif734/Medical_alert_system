@@ -2,7 +2,8 @@
 from openai import AsyncOpenAI
 from app.core.config import settings
 
-client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
+# use the API key defined in `app/core/config.py` (from `.env`)
+client = AsyncOpenAI(api_key=settings.API_KEY)
 async def transcribe_audio(audio_path: str) -> str:
     """
     Transcribes audio file to text using Whisper API.

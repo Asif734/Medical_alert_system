@@ -1,3 +1,4 @@
+
 from pydantic import BaseModel
 from typing import Optional
 
@@ -14,3 +15,6 @@ class Alert(AlertBase):
 
     class Config:
         orm_mode = True
+
+# Alias
+AlertSchema = Alert

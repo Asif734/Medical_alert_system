@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.v1.endpoints import transcriptions, profiling, alerts
+from app.api.v1.endpoints import transcriptions, profiling, alerts, patient_alert
 
 app = FastAPI()
 
@@ -11,6 +11,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(patient_alert.router, prefix="/api/v1/patient_alert", tags=["patient_alert"])
 
 app.include_router(transcriptions.router, prefix="/api/v1/transcriptions", tags=["transcriptions"])
 app.include_router(profiling.router, prefix="/api/v1/profiling", tags=["profiling"])
